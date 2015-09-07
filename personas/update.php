@@ -15,7 +15,8 @@
         $db->next_result();
 
         $res = $db->query("CALL spGetPaises;");
-        
+		
+        $db->next_result();
     }else{
         header('Location: ../index.php');
     }
@@ -31,13 +32,12 @@
         $p8 = "'".$_POST['id']."'";
 
         $db->query("CALL spActualizarPersona($p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8);");
-        
-        header('Location: ../index.php');
-        
+		
+		header('Location: ../index.php');
     }
 ?>
 
-<form method="post" autocomplete="off">
+<form action="update.php" method="post" autocomplete="off">
 <ul data-role="listview" data-inset="false" data-theme="b">
     <input type="hidden" name ="id" value="<?php echo $id?>">
 	<li>
