@@ -1,8 +1,8 @@
 <?php
-	$HOST = '127.0.0.1:3306';
+	$HOST = '127.0.0.1:3307';
 	$BASE = 'tec_movil_crud';
 	$USER = 'root';
-	$PASS = '';
+	$PASS = 'root';
 	$dialog = false;
 	$confirmar = false;
     
